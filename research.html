@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Istiaque Ahmed</title>
+<meta name="description" content="Research on the security of AI systems, privacy-preserving identity with SSI, DIDs and zero-knowledge proofs, blockchain infrastructure, and generative model architectures, by Istiaque Ahmed.">
+<meta name="author" content="Istiaque Ahmed">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B6B5F'/><text x='16' y='23' font-family='Georgia,serif' font-weight='600' font-size='17' fill='%23ffffff' text-anchor='middle'>IA</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+  try { var t = localStorage.getItem("ia-theme");
+        if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); }
+  catch (e) {}
+</script>
+</head>
+
+<body data-page="research">
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav">
+  <div class="nav__in">
+    <a class="nav__brand" href="index.html"><span class="nav__mono">IA</span>Istiaque Ahmed</a>
+    <div class="nav__links" id="navLinks">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="research.html" data-nav="research">Research</a>
+      <a href="publications.html" data-nav="publications">Publications</a>
+      <a href="experience.html" data-nav="experience">Experience</a>
+      <a href="cv.html" data-nav="cv">Resume</a>
+      <a href="https://medium.com/@isti.ru.cse" data-nav="blog" rel="me noopener" target="_blank">Blog<span class="nav__ext">&#8599;</span></a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav__tools">
+      <button id="themeBtn" class="iconbtn" type="button" aria-label="Switch colour theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.6M12 19v2.6M2.4 12h2.6M19 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 1 1 9.8 4a6.6 6.6 0 0 0 10.2 10.2z"/></svg>
+      </button>
+      <button id="burger" class="iconbtn burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <header class="phead wrap">
+    <p class="eyebrow">Research</p>
+    <h1>Trust you can verify</h1>
+    <p>
+      My work sits where cryptography meets deployed systems, and lately where
+      both meet generative models. The question underneath all of it is the
+      same: how do you prove something is trustworthy without having to hand
+      over everything you know?
+    </p>
+  </header>
+
+  <div class="wrap">
+
+    <!-- =========================== AREA 1 =========================== -->
+    <section class="area" id="ai-security">
+      <span class="area__ico">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.4-3.1 7.6-7.5 9-4.4-1.4-7.5-4.6-7.5-9V6z"/><path d="M9 12.2l2.2 2.2 4.2-4.4"/></svg>
+      </span>
+      <div>
+        <h2>Security of AI systems</h2>
+        <p>
+          Large language models and the agents built on them are now exposed
+          directly to untrusted input, which makes them an attack surface rather
+          than just a capability. I work on defences that are cheap enough to run
+          in the request path: dense semantic embeddings for prompt-safety
+          guardrails, benign-anchored methods for cutting false alarms in
+          intrusion detection, and identity mechanisms that let autonomous agents
+          prove who they are acting for.
+        </p>
+        <p class="area__tags">
+          <span class="tag">LLM prompt safety</span><span class="tag">guardrails</span>
+          <span class="tag">agentic AI</span><span class="tag">SSI for AI agents</span>
+          <span class="tag">explainable AI</span><span class="tag">intrusion detection</span>
+        </p>
+        <h3 class="sub__h">Key publications</h3>
+        <div data-arealist="ai"></div>
+      </div>
+    </section>
+
+    <!-- =========================== AREA 2 =========================== -->
+    <section class="area" id="llm">
+      <span class="area__ico">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8.6 4.6L12 12.2 3.4 7.6z"/><path d="M3.4 12.1L12 16.7l8.6-4.6"/><path d="M3.4 16.6L12 21.2l8.6-4.6"/></svg>
+      </span>
+      <div>
+        <h2>LLM and generative model architectures</h2>
+        <p class="pub__note" style="margin-bottom:.8rem">Current direction &mdash; work in progress</p>
+        <p>
+          Most of my work so far has treated large language models as something
+          to defend. I have recently started working on building them instead:
+          autoregressive LLM architectures, and diffusion-based generative models
+          as an alternative to left-to-right generation. The two paradigms trade off differently on
+          sample quality, controllability and inference cost, and those
+          differences matter for the safety questions in my other work &mdash; a
+          model you can steer during generation is a model you can constrain.
+        </p>
+        <p class="area__tags">
+          <span class="tag">autoregressive models</span><span class="tag">diffusion models</span>
+          <span class="tag">generative modelling</span><span class="tag">LLM pretraining</span>
+          <span class="tag">model architecture</span>
+        </p>
+        <div data-arealist="llm"></div>
+      </div>
+    </section>
+
+    <!-- =========================== AREA 3 =========================== -->
+    <section class="area" id="privacy">
+      <span class="area__ico">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="12" r="3.3"/><path d="M11.3 12H21M17.2 12v3.1M20 12v2.2"/></svg>
+      </span>
+      <div>
+        <h2>Privacy-preserving identity</h2>
+        <p>
+          Identity verification normally works by disclosure: to prove you are
+          eligible, you reveal the document that proves it. My doctoral research
+          attacked that trade-off, building electronic know-your-customer systems
+          where a user proves a claim without surrendering the underlying data —
+          using self-sovereign identity, decentralized identifiers, verifiable
+          credentials and zero-knowledge proofs over Merkle-tree commitments.
+        </p>
+        <p class="area__tags">
+          <span class="tag">SSI</span><span class="tag">DID</span>
+          <span class="tag">verifiable credentials</span><span class="tag">eKYC</span>
+          <span class="tag">zk-SNARKs</span><span class="tag">ZK circuit design</span>
+          <span class="tag">MPC</span>
+        </p>
+
+        <div class="callout">
+          <h3>Doctoral dissertation</h3>
+          <p>
+            <em>A Privacy-Preserving Decentralized eKYC Framework Leveraging SSI,
+            DIDs, and Zero-Knowledge Proofs</em> — Graduate School of Informatics,
+            Osaka Metropolitan University, March 2026. Supervised by
+            Prof. Tadashi Nakano and Prof. Thi Hong Tran, with Dr. Kentaroh Toyoda.
+            Results published in <em>IEEE Internet of Things Journal</em>,
+            <em>IEEE Access</em> and <em>IEEE Transactions on Sustainable Computing</em>.
+          </p>
+        </div>
+
+        <h3 class="sub__h">Key publications</h3>
+        <div data-arealist="privacy"></div>
+      </div>
+    </section>
+
+    <!-- =========================== AREA 4 =========================== -->
+    <section class="area" id="blockchain">
+      <span class="area__ico">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="6.4" height="6.4" rx="1.4"/><rect x="14.6" y="4" width="6.4" height="6.4" rx="1.4"/><rect x="8.8" y="13.6" width="6.4" height="6.4" rx="1.4"/><path d="M9.4 7.2h5.2M7.6 10.4l2 3.2M16.4 10.4l-2 3.2"/></svg>
+      </span>
+      <div>
+        <h2>Blockchain and secure communication</h2>
+        <p>
+          Distributed ledgers are the substrate for most of this work, so I spend
+          time on the substrate itself: consensus behaviour, smart-contract
+          security, post-quantum-safe design, and what it takes to anchor
+          credentials on-chain without the cost becoming absurd. Applied
+          deployments have covered supply-chain traceability, healthcare
+          authentication, charitable giving and on-chain governance.
+        </p>
+        <p class="area__tags">
+          <span class="tag">consensus</span><span class="tag">smart-contract security</span>
+          <span class="tag">post-quantum-safe design</span><span class="tag">Web3</span>
+          <span class="tag">DeFi</span><span class="tag">dApps</span>
+        </p>
+        <h3 class="sub__h">Key publications</h3>
+        <div data-arealist="blockchain"></div>
+      </div>
+    </section>
+
+    <!-- ========================== SOFTWARE ========================== -->
+    <section class="section" id="software">
+      <h2>Software and research artefacts</h2>
+      <ul class="rows">
+        <li>
+          <span class="rows__when">2026</span>
+          <div>
+            <h3>AgentRed <span class="meta">— AI agent security assessment framework</span></h3>
+            <p>Open-source red-teaming framework for automated security evaluation of
+               AI agents, covering prompt injection, tool misuse, sensitive-data
+               leakage and system-prompt leakage. Developer and maintainer.</p>
+            <p class="links">
+                  <a href="https://github.com/istiaque010/AgentRed" rel="noopener" target="_blank">Repository</a>
+              <span class="tag">MIT</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2026</span>
+          <div>
+            <h3>LessonQ <span class="meta">— learning management system</span></h3>
+            <p>Learning management platform built and operated in Bangladesh.
+               Project lead.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2023</span>
+          <div>
+            <h3>Customised Uniswap V2/V3 deployment</h3>
+            <p>Testnet implementation and analysis at INFONET Lab, Gwangju Institute
+               of Science and Technology, Republic of Korea.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2022</span>
+          <div>
+            <h3>ETH-ECC private Ethereum network on AWS</h3>
+            <p>Network deployment, mining, MetaMask integration and transfer tooling
+               at INFONET Lab, GIST; documented at infonet.gist.ac.kr.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2022</span>
+          <div>
+            <h3>BTCECC private Bitcoin network and block explorer</h3>
+            <p>Block parsing and processing pipeline for a customised Bitcoin
+               network, INFONET Lab, GIST.</p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2022</span>
+          <div>
+            <h3>Ethereum faucet dApp and ERC token implementations</h3>
+            <p>React, Truffle and Web3.js faucet with ERC-20, ERC-721 and ERC-1155
+               reference implementations, INFONET Lab, GIST.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
+  <div class="wrap">
+    <section class="cta">
+      <h2>Working on something adjacent?</h2>
+      <p>
+        I am always interested in collaborations on agent security, verifiable
+        credentials and applied zero-knowledge systems.
+      </p>
+      <p class="cta__actions">
+        <a class="btn" href="mailto:istiaque@omu.ac.jp" target="_blank">Get in touch</a>
+        <a class="btn btn--ghost" href="publications.html">Browse publications</a>
+      </p>
+    </section>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div>
+      <p class="foot__name">Istiaque Ahmed</p>
+      <p>Postdoctoral Researcher, ICT Convergence Research Center<br>
+         Kumoh National Institute of Technology<br>
+         61 Daehak-ro, Gumi-si, Gyeongsangbuk-do, Republic of Korea</p>
+    </div>
+    <div>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="cv.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Elsewhere</h2>
+      <ul>
+        <li><a href="mailto:istiaque@omu.ac.jp" target="_blank">istiaque@omu.ac.jp</a></li>
+        <li><a href="https://scholar.google.com/citations?user=SCHOLAR_ID" rel="me noopener" target="_blank">Google Scholar</a></li>
+        <li><a href="https://github.com/istiaque010" rel="me noopener" target="_blank">GitHub</a></li>
+        <li><a href="https://orcid.org/0000-0002-3112-6568" rel="me noopener" target="_blank">ORCID</a></li>
+        <li><a href="https://www.linkedin.com/in/istirare/" rel="me noopener" target="_blank">LinkedIn</a></li>
+        <li><a href="https://medium.com/@isti.ru.cse" rel="me noopener" target="_blank">Medium</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="foot__meta">&copy; <span data-year>2026</span> Istiaque Ahmed. All rights reserved.</p>
+</footer>
+
+<dialog id="bibDlg" class="dlg">
+  <form method="dialog">
+    <div class="dlg__head">
+      <h2>BibTeX</h2>
+      <button class="dlg__x" value="close" aria-label="Close">&times;</button>
+    </div>
+    <pre id="bibOut" tabindex="0"></pre>
+    <div class="dlg__foot">
+      <button type="button" id="bibCopy" class="btn">Copy</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="publications.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
