@@ -78,18 +78,19 @@ records are all derived automatically. Write your own name exactly as
 
 `AREAS` near the top of `main.js` maps each area to a list of tags. An entry
 joins an area when any of its `tags` appears in that list. The mapping drives
-three things: the publication counts on the home cards, the "key publications"
-lists on the research page, and the `publications.html?area=…` deep links.
+the publication counts on the home cards and the "key publications" lists on
+the research page.
 
 To add an area: add an entry to `AREAS`, a card on `index.html` with
-`data-areacount="<key>"`, and a section on `research.html` with
-`data-arealist="<key>"`.
+`data-areacount="<key>"` and `href="research.html#<key>"`, and a section on
+`research.html` with `id="<key>"` and `data-arealist="<key>"`.
 
-An area with no publications yet (currently *LLM and generative model
-architectures*) shows "Current direction" instead of a count, and its home card links to
-`research.html#<key>` rather than to a filter that would return nothing. Both
-switch over automatically as soon as a tagged paper exists — tag it
-`autoregressive models`, `diffusion models`, `generative models`,
+Every home card links to `research.html#<key>` regardless of publication
+count — it always lands on the matching section, never a `publications.html`
+filter. An area with no publications yet (currently *LLMs, Generative AI
+models, and Agentic AI architectures*) shows "Current direction" instead of a
+count; that label switches over automatically as soon as a tagged paper
+exists — tag it `autoregressive models`, `diffusion models`, `generative models`,
 `LLM pretraining` or `model architecture`.
 
 Area order on the home page and the research page is the source order in the

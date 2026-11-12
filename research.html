@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research — Istiaque Ahmed</title>
-<meta name="description" content="Research on the security of AI systems, privacy-preserving identity with SSI, DIDs and zero-knowledge proofs, blockchain infrastructure, and generative model architectures, by Istiaque Ahmed.">
+<meta name="description" content="Research on the security and authorization of AI systems and agentic AI, privacy-preserving identity and authorization with SSI, DIDs and zero-knowledge proofs, blockchain infrastructure, and LLMs, generative AI models, and agentic AI architectures, by Istiaque Ahmed.">
 <meta name="author" content="Istiaque Ahmed">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B6B5F'/><text x='16' y='23' font-family='Georgia,serif' font-weight='600' font-size='17' fill='%23ffffff' text-anchor='middle'>IA</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
 
   <header class="phead wrap">
     <p class="eyebrow">Research</p>
-    <h1>Trust you can verify</h1>
+    <h1>Research Areas</h1>
     <p>
       My work sits where cryptography meets deployed systems, and lately where
       both meet generative models. The question underneath all of it is the
@@ -61,12 +61,12 @@
   <div class="wrap">
 
     <!-- =========================== AREA 1 =========================== -->
-    <section class="area" id="ai-security">
+    <section class="area" id="ai">
       <span class="area__ico">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.4-3.1 7.6-7.5 9-4.4-1.4-7.5-4.6-7.5-9V6z"/><path d="M9 12.2l2.2 2.2 4.2-4.4"/></svg>
       </span>
       <div>
-        <h2>Security of AI systems</h2>
+        <h2>Security and Authorization of AI Systems and Agentic AI</h2>
         <p>
           Large language models and the agents built on them are now exposed
           directly to untrusted input, which makes them an attack surface rather
@@ -92,7 +92,7 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8.6 4.6L12 12.2 3.4 7.6z"/><path d="M3.4 12.1L12 16.7l8.6-4.6"/><path d="M3.4 16.6L12 21.2l8.6-4.6"/></svg>
       </span>
       <div>
-        <h2>LLM and generative model architectures</h2>
+        <h2>LLMs, Generative AI models, and Agentic AI architectures</h2>
         <p class="pub__note" style="margin-bottom:.8rem">Current direction &mdash; work in progress</p>
         <p>
           Most of my work so far has treated large language models as something
@@ -108,6 +108,75 @@
           <span class="tag">generative modelling</span><span class="tag">LLM pretraining</span>
           <span class="tag">model architecture</span>
         </p>
+
+        <h3 class="sub__h">Current-direction contributions</h3>
+        <ul class="rows">
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Autoregressive Transformer Language Model <span class="meta">— git repo</span></h3>
+              <p>GPT-style decoder-only transformer built from scratch in PyTorch
+                 — 13.9M parameters, 6 layers, trained CPU-only on TinyStories in
+                 under 10 hours to a test perplexity of 5.74 — with a hand-written
+                 causal-attention implementation and a comparison of seven
+                 decoding strategies and their effect on narrative coherence.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Autoregressive-Transformer-Language-Model" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Reflex-Guard <span class="meta">— preprint, under review</span></h3>
+              <p>A low-latency LLM prompt-safety guardrail pairing jailbreak-aware
+                 preprocessing with a 33M-parameter BGE encoder — the defence side
+                 of the same steer-and-constrain question that motivates the
+                 architecture work above. Submitted to IEEE Access.</p>
+              <p class="links">
+                <a href="publications.html#arxiv2026-reflex-guard">Full entry</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Grounded Intent Compilation <span class="meta">— article, under review</span></h3>
+              <p>Fine-grained, least-privilege access control for clinical LLM
+                 agents, compiling LLM-extracted intent into deterministic OPA
+                 policies at tool-call and record level. Submitted to IEEE Open
+                 Journal of the Computer Society.</p>
+              <p class="links">
+                <a href="publications.html#ojcs2026-gic">Full entry</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2025</span>
+            <div>
+              <h3>The Role of Large Language Models in Cyber Security <span class="meta">— book chapter, submitted</span></h3>
+              <p>Survey chapter on LLM applications and risks in cyber security,
+                 for <em>AI-IoT-6G Enabled Smart Environment for Industry 5.0 and
+                 Society 5.0</em> (CRC Press).</p>
+              <p class="links">
+                <a href="publications.html#crc-llm-cybersecurity">Full entry</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>AgentRed <span class="meta">— git repo</span></h3>
+              <p>Open-source red-teaming framework for automated security
+                 evaluation of LLM agents, covering prompt injection, tool
+                 misuse and data/system-prompt leakage.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/AgentRed" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+        </ul>
+
         <div data-arealist="llm"></div>
       </div>
     </section>
@@ -118,7 +187,7 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="12" r="3.3"/><path d="M11.3 12H21M17.2 12v3.1M20 12v2.2"/></svg>
       </span>
       <div>
-        <h2>Privacy-preserving identity</h2>
+        <h2>Privacy-preserving Identity and Authorization</h2>
         <p>
           Identity verification normally works by disclosure: to prove you are
           eligible, you reveal the document that proves it. My doctoral research
@@ -180,6 +249,20 @@
     <section class="section" id="software">
       <h2>Software and research artefacts</h2>
       <ul class="rows">
+        <li>
+          <span class="rows__when">2026</span>
+          <div>
+            <h3>Autoregressive Transformer Language Model <span class="meta">— GPT-style decoder-only LM built from scratch</span></h3>
+            <p>13.9M-parameter decoder-only transformer in PyTorch, trained
+               CPU-only on TinyStories to a test perplexity of 5.74, with a
+               hand-written causal-attention implementation, a byte-level BPE
+               tokenizer, and a comparison of seven decoding strategies.
+               Developer and maintainer.</p>
+            <p class="links">
+              <a href="https://github.com/istiaque010/Autoregressive-Transformer-Language-Model" rel="noopener" target="_blank">Repository</a>
+            </p>
+          </div>
+        </li>
         <li>
           <span class="rows__when">2026</span>
           <div>
