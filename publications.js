@@ -272,16 +272,28 @@ window.PUBLICATIONS = [
     note: "Submitted November 2025",
     tags: ["LLM", "security"]
   },
+  {
+    id: "ojcs2026-gic",
+    type: "review",
+    title: "Grounded Intent Compilation for Fine-Grained Access Control in Clinical LLM Agents",
+    authors: ["Istiaque Ahmed", "A. F. Ahmed", "M. S. Sayeed"],
+    venue: "IEEE Open Journal of the Computer Society",
+    year: 2026,
+    note: "Submitted; under review",
+    tags: ["LLM agents", "agentic AI", "access control", "prompt injection", "AI security"]
+  },
 
   /* ------------------------------ Preprints ------------------------------- */
   {
     id: "arxiv2026-reflex-guard",
     type: "preprint",
     title: "Reflex-Guard: A Low-Latency Guardrail for LLM Prompt Safety Using Dense Semantic Embeddings",
-    authors: ["Istiaque Ahmed", "A. A. Borsha", "R. D. Prangon", "A. F. Ahmad", "T. H. Tran"],
+    authors: ["Istiaque Ahmed", "Most. A. A. Borsha", "R. D. Prangon", "A.-F. Ahmad", "K. Toyoda", "T. H. Tran"],
     arxiv: "2608.17556", primaryClass: "cs.CR", year: 2026,
+    code: "https://github.com/istiaque010/reflex_guard",
+    note: "Submitted to IEEE Access; under review",
     selected: true,
-    tags: ["LLM safety", "guardrails", "AI security"]
+    tags: ["LLM safety", "guardrails", "AI security", "jailbreak detection", "adversarial robustness"]
   },
   {
     id: "arxiv2026-lowrank-medical",

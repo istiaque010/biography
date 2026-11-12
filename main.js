@@ -93,17 +93,17 @@
   // the "key publications" lists on the research page, and ?area= deep links.
   var AREAS = {
     ai: {
-      label: "Security of AI systems",
+      label: "Security and Authorization of AI Systems and Agentic AI",
       tags: ["AI security", "LLM safety", "guardrails", "agentic AI", "LLM",
              "intrusion detection"]
     },
     llm: {
-      label: "LLM and generative model architectures",
+      label: "LLMs, Generative AI models, and Agentic AI architectures",
       tags: ["autoregressive models", "diffusion models", "generative models",
              "LLM pretraining", "model architecture"]
     },
     privacy: {
-      label: "Privacy-preserving identity",
+      label: "Privacy-preserving Identity and Authorization",
       tags: ["ZKP", "SSI", "DID", "eKYC", "verifiable credentials", "MPC",
              "identity", "privacy", "usable privacy", "Merkle tree", "access control"]
     },
@@ -276,19 +276,27 @@
 
   /* ------------------------- home: area pub counts ----------------------- */
 
-  // An area with no papers yet is a direction, not an empty filter, so the
-  // card points at the research page instead of a search that returns nothing.
+  // "llm" has no tagged publications yet — its count instead comes from the
+  // "Current-direction contributions" list on the research page (papers under
+  // review plus git repos), kept in sync by hand since those aren't all
+  // publications.js entries.
+  var DIRECTION_CONTRIBUTIONS = { llm: 5 };
+
+  // Home cards always point at the matching section on the research page;
+  // the count here is just a label, not a link target.
   $$("[data-areacount]").forEach(function (el) {
     var key = el.getAttribute("data-areacount");
+    if (DIRECTION_CONTRIBUTIONS[key] != null) {
+      var c = DIRECTION_CONTRIBUTIONS[key];
+      el.innerHTML = c
+        ? c + " current-direction contribution" + (c === 1 ? "" : "s") + " &rarr;"
+        : "Current direction &rarr;";
+      return;
+    }
     var n = areaEntries(key).length;
     el.innerHTML = n
       ? n + " publication" + (n === 1 ? "" : "s") + " &rarr;"
       : "Current direction &rarr;";
-    var card = el.closest("a.card");
-    if (card) {
-      card.setAttribute("href", n ? "publications.html?area=" + key
-                                  : "research.html#" + key);
-    }
   });
 
   /* ------------------------ home: frequent co-authors -------------------- */
