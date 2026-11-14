@@ -128,6 +128,51 @@
           <li>
             <span class="rows__when">2026</span>
             <div>
+              <h3>A Small Diffusion Language Model <span class="meta">— git repo</span></h3>
+              <p>Masked diffusion language model that generates stories by
+                 iteratively unmasking tokens instead of writing left-to-right,
+                 with configurable reveal order and 4&ndash;32 step sampling.
+                 Underperforms an equally sized autoregressive baseline
+                 (perplexity &le;11.7 vs 5.2), with local incoherence in 97% of
+                 outputs from tokens revealed simultaneously.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/A-Small-Diffusion-Language-Model" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Autoregressive vs. Diffusion Language Models <span class="meta">— git repo</span></h3>
+              <p>Controlled benchmark of autoregressive and masked-diffusion
+                 language models under identical conditions &mdash; same
+                 13.9M-parameter size, same 163.8M training tokens, same
+                 TinyStories data. The autoregressive model is 6.3&times; more
+                 fluent by an independent scorer (perplexity 8.5 vs 54.1) and
+                 wins on blind quality rubrics; diffusion is competitive only
+                 under aggressive step reduction.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Autoregressive-vs.-Diffusion-Language-Models" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Knowledge Distillation <span class="meta">— git repo</span></h3>
+              <p>Distills a 13.9M-parameter teacher into a 5.3M-parameter
+                 student via combined cross-entropy and KL-divergence loss
+                 &mdash; 2.6&times; smaller, roughly 1.8&times; faster
+                 inference, closing about 27% of the quality gap (test
+                 perplexity 9.63 to 8.59).</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Knowledge-Distillation" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
               <h3>Reflex-Guard <span class="meta">— preprint, under review</span></h3>
               <p>A low-latency LLM prompt-safety guardrail pairing jailbreak-aware
                  preprocessing with a 33M-parameter BGE encoder — the defence side
@@ -260,6 +305,46 @@
                Developer and maintainer.</p>
             <p class="links">
               <a href="https://github.com/istiaque010/Autoregressive-Transformer-Language-Model" rel="noopener" target="_blank">Repository</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2026</span>
+          <div>
+            <h3>A Small Diffusion Language Model <span class="meta">— masked-diffusion LM built from scratch</span></h3>
+            <p>Bidirectional transformer trained to generate stories by
+               iteratively unmasking tokens rather than writing left-to-right,
+               with configurable reveal ordering and 4&ndash;32 step sampling.
+               Benchmarked against an equally sized autoregressive model.
+               Developer and maintainer.</p>
+            <p class="links">
+              <a href="https://github.com/istiaque010/A-Small-Diffusion-Language-Model" rel="noopener" target="_blank">Repository</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2026</span>
+          <div>
+            <h3>Autoregressive vs. Diffusion Language Models <span class="meta">— controlled architecture benchmark</span></h3>
+            <p>Head-to-head comparison of autoregressive and masked-diffusion
+               language models at matched parameter count and training data,
+               scored on fluency, blind quality rubrics and inference latency.
+               Developer and maintainer.</p>
+            <p class="links">
+              <a href="https://github.com/istiaque010/Autoregressive-vs.-Diffusion-Language-Models" rel="noopener" target="_blank">Repository</a>
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="rows__when">2026</span>
+          <div>
+            <h3>Knowledge Distillation <span class="meta">— teacher-student compression for a small LM</span></h3>
+            <p>Distills a 13.9M-parameter language model into a 5.3M-parameter
+               student via combined cross-entropy and KL-divergence loss,
+               trading a small quality gap for smaller size and faster
+               inference. Developer and maintainer.</p>
+            <p class="links">
+              <a href="https://github.com/istiaque010/Knowledge-Distillation" rel="noopener" target="_blank">Repository</a>
             </p>
           </div>
         </li>

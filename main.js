@@ -280,7 +280,7 @@
   // "Current-direction contributions" list on the research page (papers under
   // review plus git repos), kept in sync by hand since those aren't all
   // publications.js entries.
-  var DIRECTION_CONTRIBUTIONS = { llm: 5 };
+  var DIRECTION_CONTRIBUTIONS = { llm: 8 };
 
   // Home cards always point at the matching section on the research page;
   // the count here is just a label, not a link target.
