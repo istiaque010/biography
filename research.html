@@ -173,6 +173,104 @@
           <li>
             <span class="rows__when">2026</span>
             <div>
+              <h3>Adaptive Generation Scheduling for Diffusion Language Models <span class="meta">— git repo</span></h3>
+              <p>Decides which blanks a masked diffusion model fills first, and
+                 never fills two neighbouring tokens in the same pass. This
+                 removes doubled words and broken grammar at little cost.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Adaptive-Generation-Scheduling-for-Diffusion-Language-Models" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Parallel Decoding for Diffusion Language Models <span class="meta">— git repo</span></h3>
+              <p>Fills many blanks at once instead of one pass per token. A
+                 simple trick makes generation 2.2&times; faster at no cost in
+                 quality.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Parallel-Decoding-for-Diffusion-Language-Models" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Distillation of Diffusion Language Models <span class="meta">— git repo</span></h3>
+              <p>Teaches a diffusion model to finish generation in 8 passes
+                 instead of 16. The 8-pass student matches the 16-pass teacher.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Distillation-of-Diffusion-Language-Models" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>GRPO Arithmetic Post-Training <span class="meta">— git repo</span></h3>
+              <p>Applies reinforcement learning (GRPO) to simple arithmetic in a
+                 tiny model, and compares it against spending the same compute on
+                 supervised training. From a weak start, the equal-compute
+                 supervised run gains more than GRPO does.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Teaching-a-tiny-model-arithmetic-with-GRPO" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Synthetic Data Generation and Training for LLMs <span class="meta">— git repo</span></h3>
+              <p>A larger model writes extra training stories when real ones are
+                 scarce. Compared with the same amount of new real data, the
+                 synthetic stories deliver about half the gain, and data variety
+                 matters more than data quantity.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Synthetic-Data-Generation-and-Training-for-LLM" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Flow-Matching Language Model <span class="meta">— git repo</span></h3>
+              <p>Generates text by moving random points in embedding space toward
+                 words. At matched size and training budget it produces word
+                 salad, with a scorer perplexity far above both autoregressive and
+                 masked-diffusion models.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Flow-Matching-Language-Model" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Diffusion vs. Flow-Matching Language Models <span class="meta">— git repo</span></h3>
+              <p>Controlled comparison of the masked-diffusion and flow-matching
+                 language models under the same conditions, measuring quality,
+                 speed and memory.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Diffusion-vs.-Flow-Matching-Language-Models" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
+              <h3>Efficient LLM Inference <span class="meta">— git repo</span></h3>
+              <p>Faster text generation through a key-value cache, smaller
+                 weights, a draft model for speculative decoding, and vLLM
+                 serving.</p>
+              <p class="links">
+                <a href="https://github.com/istiaque010/Efficient-LLM-Inference" rel="noopener" target="_blank">Repository</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="rows__when">2026</span>
+            <div>
               <h3>Reflex-Guard <span class="meta">— preprint, under review</span></h3>
               <p>A low-latency LLM prompt-safety guardrail pairing jailbreak-aware
                  preprocessing with a 33M-parameter BGE encoder — the defence side
