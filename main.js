@@ -120,9 +120,14 @@
     return (p.tags || []).some(function (t) { return area.tags.indexOf(t) !== -1; });
   }
 
+  // Newest first; entries flagged demoted: true sink below the rest.
+  function byPriority(a, b) {
+    if (!!a.demoted !== !!b.demoted) return a.demoted ? 1 : -1;
+    return (b.year || 0) - (a.year || 0);
+  }
+
   function areaEntries(key) {
-    return DATA.filter(function (p) { return inArea(p, key); })
-               .sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+    return DATA.filter(function (p) { return inArea(p, key); }).sort(byPriority);
   }
 
   function venueText(p) {
@@ -270,7 +275,7 @@
   var selectedEl = $("#selectedWork");
   if (selectedEl) {
     var picks = DATA.filter(function (p) { return p.selected; })
-                    .sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+                    .sort(byPriority);
     selectedEl.innerHTML = picks.map(workHTML).join("");
   }
 
@@ -369,12 +374,7 @@
     GROUPS.forEach(function (g) {
       var items = shown.filter(function (p) { return p.type === g.key; });
       if (!items.length) return;
-      // Demoted entries (demoted: true) sink to the end of their group;
-      // otherwise newest first.
-      items.sort(function (a, b) {
-        if (!!a.demoted !== !!b.demoted) return a.demoted ? 1 : -1;
-        return (b.year || 0) - (a.year || 0);
-      });
+      items.sort(byPriority);
       html += '<section class="pub__group"><h2>' + g.label +
               '<span class="chip__n">' + items.length + "</span></h2>" +
               items.map(entryHTML).join("") + "</section>";
