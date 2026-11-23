@@ -60,6 +60,7 @@ window.PUBLICATIONS = [
     venue: "Digital",
     volume: "6", number: "1", artno: "3", year: 2026,
     doi: "10.3390/digital6010003",
+    demoted: true,
     tags: ["agentic AI", "governance", "blockchain"]
   },
   {

@@ -369,7 +369,12 @@
     GROUPS.forEach(function (g) {
       var items = shown.filter(function (p) { return p.type === g.key; });
       if (!items.length) return;
-      items.sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+      // Demoted entries (demoted: true) sink to the end of their group;
+      // otherwise newest first.
+      items.sort(function (a, b) {
+        if (!!a.demoted !== !!b.demoted) return a.demoted ? 1 : -1;
+        return (b.year || 0) - (a.year || 0);
+      });
       html += '<section class="pub__group"><h2>' + g.label +
               '<span class="chip__n">' + items.length + "</span></h2>" +
               items.map(entryHTML).join("") + "</section>";
