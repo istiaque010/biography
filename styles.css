@@ -78,7 +78,7 @@ a:hover {
   text-decoration-thickness: 1px; text-underline-offset: 3px;
 }
 
-::selection { background: var(--accent-bg); color: var(--text); }
+::selection { background: #B5DCD4; color: #14171A; }
 
 /* ------------------------------ interaction ------------------------------
    One shared timing for every state change. Properties are named rather than

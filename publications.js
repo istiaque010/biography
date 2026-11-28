@@ -292,7 +292,7 @@ window.PUBLICATIONS = [
     authors: ["Istiaque Ahmed", "Most. A. A. Borsha", "R. D. Prangon", "A.-F. Ahmad", "K. Toyoda", "T. H. Tran"],
     arxiv: "2608.17556", primaryClass: "cs.CR", year: 2026,
     code: "https://github.com/istiaque010/reflex_guard",
-    note: "Submitted to IEEE Access; under review",
+    note: "Accepted by IEEE Access",
     selected: true,
     tags: ["LLM safety", "guardrails", "AI security", "jailbreak detection", "adversarial robustness"]
   },
